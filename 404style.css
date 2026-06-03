@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #19a7ff,
+        #0055ff
+    );
+    padding:20px;
+}
+
+.error-container{
+    width:90%;
+    max-width:650px;
+}
+
+.error-content{
+    background:white;
+    text-align:center;
+    padding:60px 40px;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+.error-illustration{
+    max-width:280px;
+    margin:0 auto 20px;
+}
+
+.error-svg{
+    width:100%;
+    height:auto;
+}
+
+/* Floating animation for SVG question marks */
+.error-svg text{
+    animation:float 3s ease-in-out infinite alternate;
+}
+
+.error-svg text:nth-of-type(2){
+    animation-delay:0.5s;
+}
+
+.error-svg text:nth-of-type(3){
+    animation-delay:1s;
+}
+
+.error-svg text:nth-of-type(4){
+    animation-delay:1.5s;
+}
+
+@keyframes float{
+    0%{ transform:translateY(0); }
+    100%{ transform:translateY(-8px); }
+}
+
+.error-content h1{
+    font-size:7rem;
+    background:linear-gradient(135deg,#19a7ff,#0055ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    line-height:1;
+    font-weight:800;
+}
+
+.error-content h2{
+    margin-top:10px;
+    font-size:1.8rem;
+    color:#1b2b4b;
+}
+
+.error-content p{
+    margin:20px 0 30px;
+    color:#666;
+    line-height:1.8;
+    font-size:0.95rem;
+}
+
+.home-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 30px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#19a7ff,#0055ff);
+    color:white;
+    font-weight:600;
+    text-decoration:none;
+    transition:all .3s ease;
+    font-size:0.95rem;
+}
+
+.home-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 30px rgba(25,167,255,.4);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:576px){
+
+    .error-content{
+        padding:40px 20px;
+    }
+
+    .error-content h1{
+        font-size:5rem;
+    }
+
+    .error-content h2{
+        font-size:1.3rem;
+    }
+
+    .error-content p{
+        font-size:0.85rem;
+    }
+
+    .error-illustration{
+        max-width:220px;
+    }
+
+    .home-btn{
+        padding:12px 24px;
+        font-size:0.85rem;
+    }
+}
+
+@media(max-width:380px){
+
+    .error-content h1{
+        font-size:4rem;
+    }
+
+    .error-content h2{
+        font-size:1.1rem;
+    }
+}
